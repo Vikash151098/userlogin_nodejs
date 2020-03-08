@@ -5,7 +5,7 @@ const { User } = require('../models/user');
 const mongoose = require('mongoose');
 const express = require('express');
 const router = express.Router();
-
+mongoose.set("debug", true);
 router.post('/', async (req, res) => {
   const { error } = validate(req.body);
   if (error) return res.status(400).send(error.details[0].message);
@@ -17,7 +17,7 @@ router.post('/', async (req, res) => {
   if (!validPassword) return res.status(400).send('Invalid email or password.');
 
   const token = user.generateAuthToken();
-  res.header('Authorization', token).send(_.pick(user, ['_id', 'name', 'email']));
+  res.header('Authorization', token).send({ statusCode: 200, message: "Success", data: _.pick(user, ['_id', 'name', 'email']) });
 
 });
 

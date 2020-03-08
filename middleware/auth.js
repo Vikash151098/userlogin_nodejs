@@ -7,7 +7,7 @@ userAuth = function (req, res, next) {
 
   try {
     const decoded = jwt.verify(token, config.get('jwtPrivateKey'));
-    req.user = decoded;
+    req.jwtData = decoded;
     next();
   }
   catch (ex) {
@@ -20,7 +20,7 @@ adminAuth = function (req, res, next) {
 
   try {
     const decoded = jwt.verify(token, config.get('jwtPrivateKey'));
-    req.user = decoded;
+    req.jwtData = decoded;
     if (!decoded.isAdmin) return res.status(403).send({ statusCode: 403, message: "Failure", data: "Access denied " })
 
     next();

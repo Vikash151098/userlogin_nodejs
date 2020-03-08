@@ -11,14 +11,12 @@ const userSchema = new mongoose.Schema({
   },
   email: {
     type: String,
-    required: true,
     minlength: 5,
     maxlength: 255,
     unique: true
   },
   password: {
     type: String,
-    required: true,
     minlength: 5,
     maxlength: 1024
   },
@@ -43,8 +41,16 @@ function validateUserPost(user) {
 }
 function validateUserPut(user) {
   const schema = {
-    email: Joi.string().min(5).max(255).email().required(),
-    password: Joi.string().min(5).max(255).required()
+    name: Joi.string().min(5).max(255),
+    email: Joi.string().min(5).max(255).email(),
+  };
+
+  return Joi.validate(user, schema);
+}
+function validateUserPassword(user) {
+  const schema = {
+    oldPassword: Joi.string().min(5).max(255).required(),
+    newPassword: Joi.string().min(5).max(255).required(),
   };
 
   return Joi.validate(user, schema);
@@ -52,4 +58,7 @@ function validateUserPut(user) {
 exports.User = User;
 exports.validateUserPost = validateUserPost;
 exports.validateUserPut = validateUserPut;
+exports.validateUserPassword = validateUserPassword;
+
+
 
