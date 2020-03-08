@@ -817,3 +817,10 @@
 {"level":"info","message":"Connected to mongodb://localhost/vidly...","timestamp":"2020-01-16T11:09:26.370Z"}
 {"level":"info","message":"Listening on port 3000...","timestamp":"2020-01-16T11:09:42.684Z"}
 {"level":"info","message":"Connected to mongodb://localhost/vidly...","timestamp":"2020-01-16T11:09:43.731Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-03-08T13:33:08.805Z"}
+{"level":"info","message":"Connected to mongodb+srv://vikash98:Vikash123@cluster0-onnex.mongodb.net/userlogin?retryWrites=true&w=majority...","timestamp":"2020-03-08T13:33:16.062Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-03-08T13:36:06.390Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-03-08T13:36:30.286Z"}
+{"level":"info","message":"Connected to mongodb://vikash98:Vikash123@cluster0-shard-00-00-onnex.mongodb.net:27017,cluster0-shard-00-01-onnex.mongodb.net:27017,cluster0-shard-00-02-onnex.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority...","timestamp":"2020-03-08T13:36:32.107Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2020-03-08T13:40:47.420Z"}
+{"level":"info","message":"Connected to mongodb://vikash98:Vikash123@cluster0-shard-00-00-onnex.mongodb.net:27017,cluster0-shard-00-01-onnex.mongodb.net:27017,cluster0-shard-00-02-onnex.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority...","timestamp":"2020-03-08T13:40:51.328Z"}
