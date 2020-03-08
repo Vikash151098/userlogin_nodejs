@@ -1,5 +1,5 @@
 {
-  "name": "vidly",
+  "name": "userLogin",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "start": "node index.js"
   },
   "engines": {
-    "node":"12.14.0"
+    "node": "12.14.0"
   },
   "keywords": [],
   "author": "",

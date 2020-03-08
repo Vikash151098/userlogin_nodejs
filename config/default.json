@@ -1,3 +1,4 @@
 {
-  "jwtPrivateKey": ""
+  "jwtPrivateKey": "1234",
+  "db":"mongodb+srv://vikash98:Vikash123@cluster0-onnex.mongodb.net/userlogin?retryWrites=true&w=majority"
 }
