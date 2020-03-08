@@ -14,7 +14,7 @@ router.get('/me', adminAuth, async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-  const { error } = validate(req.body);
+  const { error } = validateUserPost(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
   let user = await User.findOne({ email: req.body.email });
@@ -30,7 +30,7 @@ router.post('/', async (req, res) => {
 });
 
 router.put('/', userAuth, async (req, res) => {
-  const { error } = validate(req.body);
+  const { error } = validateUserPut(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
   let user = User.findById(req.user.userId);
